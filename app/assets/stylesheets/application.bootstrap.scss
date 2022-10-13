@@ -1,2 +1,70 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+.home-banner {
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.home-title {
+    text-align: center;
+}
+
+hr {
+    margin: 0;
+}
+
+.header-show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+
+
+    .btn-show {
+        height: fit-content;
+    }
+}
+
+.avail {
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: green;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.unavail {
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: red;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.act-info {
+    padding: 10px 30px;
+    margin: 0;
+
+    h3 {
+        margin: 0;
+        text-decoration: underline;
+    }
+
+    p {
+        margin: 0;
+    }
+}

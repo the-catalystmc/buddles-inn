@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-masthead">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Buddles Inn</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+        <a class="nav-link" href="#available">Rooms</a>
+        <a class="nav-link" href="#">Contact Us</a>
+        <% if user_signed_in? %>
+          <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-outline-secondary'  %>
+        <% else %>
+          <a href="<%= new_user_session_path %>" class="btn btn-outline-secondary">LOGIN</i></a>
+        <% end %>
+      </div>
+    </div>    
+  </div>
+</nav>

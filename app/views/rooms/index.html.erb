@@ -1,0 +1,22 @@
+  <main class="" >
+
+  <div class="album py-5 bg-light" id='available'>
+    <h1 class="home-title">OUR ROOMS</h1>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <% if user_signed_in? %>
+          <% @rooms.each do |room| %>
+            <%= render 'shared/room', room:room %>
+          <% end %>
+      <% else %>
+        <% @rooms.each do |room| %>
+          <% if room.available == true %>
+            <%= render 'shared/room', room:room %>
+          <% end %>
+        <% end %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+
+</main>

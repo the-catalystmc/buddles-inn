@@ -1,0 +1,11 @@
+    <div class="header d-flex align-items-center justify-content-center">
+    <div class="home-banner px-3 text-center text-bg-dark cover-container p-3 mx-auto flex-column">
+        <h1 class="lead">PRIVATE AIRPORT TRANSFERS & EXCURSIONS</h1>
+        <p class="lead">
+        <%= link_to "View Rooms", rooms_path, class: "btn btn-lg btn-secondary fw-bold border-white bg-white" %>
+        </p>
+        <p class="lead">
+        <%= link_to "Contact Us", rooms_path, class: "btn btn-lg btn-secondary fw-bold border-white bg-white" %>
+        </p>
+    </div>
+  </div>

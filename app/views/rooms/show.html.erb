@@ -1,0 +1,23 @@
+<main class="show-cont">
+  <div class="room-cont">
+    <div class="room-image">
+      <%= image_tag(@room.image, class:'card-img-top product-image', alt:'thumbnail') %>
+    </div>
+    <div class="room-info">
+    <div class="header-show">
+      <h2>ROOM <%= @room.number %></h2>
+      <% if user_signed_in? %>
+      <%= link_to "Edit", edit_room_path(@room.id), class: "btn btn-show btn-sm btn-outline-secondary" %>
+      <% end %>
+    </div>
+    <hr>
+    <div class="act-info">
+      <h3>Amenities</h3>
+      <p> <%= @room.amenities %> </p>
+      <hr>
+      <h3>Price</h3>
+      <p> $<%= @room.price %> </p>
+    </div>
+    </div>
+  </div>
+</main>
