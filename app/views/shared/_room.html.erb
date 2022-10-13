@@ -1,0 +1,25 @@
+    <div class="col">
+          <div class="card shadow-sm">
+            <%= image_tag(room.image, class:' bd-placeholder-img card-img-top', height:'225', width:'100%', alt:'thumbnail') %>
+
+            <%# <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> %>
+
+            <div class="card-body">
+              <% if room.available == true %>
+                <span class="avail"><i class="bi bi-door-open-fill"> </i>AVAILABLE</span>
+              <% else %>
+                <span class="unavail"><i class="bi bi-door-closed-fill"></i>UNAVAILABLE</span>
+              <% end %>
+              <p class="card-text">One of our many comfortable rooms. Feel at home away from home.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <%= link_to "View",
+                    room_path(room),
+                    class: "btn btn-sm btn-outline-secondary"
+                    %>
+                </div>
+                  <small class="text-muted"> ROOM <%= room.number %> </small>
+              </div>
+            </div>
+          </div>
+    </div>

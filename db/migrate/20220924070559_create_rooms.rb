@@ -5,7 +5,8 @@ class CreateRooms < ActiveRecord::Migration[7.0]
       t.float :price
       t.boolean :available
       t.string :amenities
-
+      t.string :image
+      
       t.timestamps
     end
   end

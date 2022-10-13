@@ -1,0 +1,27 @@
+<%= form_with model: room do |f| %>
+   <div>
+    <%= f.text_field :number, placeholder: "Room Number", class: "form-control" %> 
+  </div>
+
+  <div>
+    <%= f.text_field :price, placeholder: "Price", class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.select :available, [true, false], placeholder: "Available", class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.text_field :amenities, placeholder: "Amenities", class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.text_field :image, placeholder: "Image", class: "form-control" %>
+  </div>
+  <div class="btn">
+    <%= f.submit %>
+  </div>     
+  <%= hidden_field_tag :room_id, @room %>
+<% end %>
+
+<%# , url: room_path, method: :post, id: 'add-room-form', local: true, scope: :report do %>

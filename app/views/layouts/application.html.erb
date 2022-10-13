@@ -6,11 +6,24 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+      <style>
+        .home-banner {
+          background: url(<%= asset_path 'room.jpg' %>);
+          background-size: cover;
+        }
+
+      </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
+    <%= render partial: "shared/navbar" %>
     <%= yield %>
+    <%= render "flash_notification" %>
+
   </body>
 </html>
