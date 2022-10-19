@@ -1,17 +1,17 @@
 <%= form_with model: @rental, url: rentals_path, method: :post do |f| %>
-   <div>
-    <%= f.select :check_in, ['true', 'false'], placeholder: "True", class: "form-control" %> 
+   <div class='new-hidden'>
+    <%= f.select :check_in, [true, false], placeholder: "True", class: "form-control", style: 'display:none' %> 
+  </div>
+
+  <div class='new-hidden'>
+    <%= f.select :check_out, [false, true], placeholder: "False", class: "form-control", style: 'display:none' %>
   </div>
 
   <div>
-    <%= f.select :check_out, ['false', 'true'], placeholder: "False", class: "form-control" %>
+    <%= f.select :shift, [' ', 'Part-Time', 'Full-Time'], placeholder: "Time", class: "form-control" %>
   </div>
 
-  <div>
-    <%= f.select :shift, ['Part-Time', 'Full-Time'], placeholder: "Time", class: "form-control" %>
-  </div>
-
-  <div>
+  <div class=''>
     <%= f.text_field :number_of_days, placeholder: "Number of Days", class: "form-control" %>
   </div>
 
