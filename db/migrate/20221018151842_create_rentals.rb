@@ -7,7 +7,8 @@ class CreateRentals < ActiveRecord::Migration[7.0]
       t.integer :number_of_days
       t.integer :number_of_hours
       t.datetime :start_date
-      t.datetime :end_date         
+      t.datetime :end_date  
+      t.references :room, null: false, foreign_key: true       
 
       t.timestamps
     end
