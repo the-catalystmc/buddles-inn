@@ -10,13 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_11_034016) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_18_151842) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "rentals", force: :cascade do |t|
+    t.boolean "check_in"
+    t.boolean "check_out"
+    t.string "shift"
+    t.integer "number_of_days"
+    t.integer "number_of_hours"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "rooms", force: :cascade do |t|
     t.integer "number"
-    t.float "price"
+    t.float "price_for_day"
+    t.float "price_for_partial"
     t.boolean "available"
     t.string "amenities"
     t.string "image"

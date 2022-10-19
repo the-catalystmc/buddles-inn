@@ -7,14 +7,14 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 rooms = Room.create([
-	{ number: 1, price: 1500.00, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
-	{ number: 2, price: 1500.00, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
-	{ number: 3, price: 1500.00, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
-	{ number: 4, price: 1500.00, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
-	{ number: 5, price: 1500.00, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
-	{ number: 6, price: 1500.00, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
-	{ number: 7, price: 1500.00, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
-	{ number: 8, price: 1500.00, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
-	{ number: 9, price: 1500.00, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
-	{ number: 10, price: 1500.00, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'}
+	{ number: 1, price_for_partial: 1000.00, price_for_day:1500, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
+	{ number: 2, price_for_partial: 1000.00, price_for_day:1500, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
+	{ number: 3, price_for_partial: 1000.00, price_for_day:1500, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
+	{ number: 4, price_for_partial: 1000.00, price_for_day:1500, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
+	{ number: 5, price_for_partial: 1000.00, price_for_day:1500, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
+	{ number: 6, price_for_partial: 1000.00, price_for_day:1500, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
+	{ number: 7, price_for_partial: 1000.00, price_for_day:1500, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
+	{ number: 8, price_for_partial: 1000.00, price_for_day:1500, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
+	{ number: 9, price_for_partial: 1000.00, price_for_day:1500, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'},
+	{ number: 10, price_for_partial: 1000.00, price_for_day:1500, available: true, amenities: 'Fan, Cable TV, Internet, Double Bed', image: 'https://i.ibb.co/fS32PYR/room.jpg'}
 	])
