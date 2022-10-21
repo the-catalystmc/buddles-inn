@@ -64,13 +64,12 @@ class RentalsController < ApplicationController
   
     def rental_params
       params.require(:rental).permit(
+        :occupant,
         :check_in,
         :check_out,
         :shift,
-        :number_of_days,
-        :number_of_hours,
+        :expected_checkout,
         :start_date,
-        :end_date,
         :room_id
       )
     end

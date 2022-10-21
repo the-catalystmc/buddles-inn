@@ -1,1 +1,15 @@
-          <%= link_to "New Room", new_rental_path, class: 'btn btn-outline-secondary' %>
+
+  <div class="album py-5 bg-light" id='available'>
+    <h1 class="home-title">OUR RENTALS</h1>
+    <%= link_to "New Rental", new_rental_path, class: 'btn btn-outline-secondary' %>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <% if user_signed_in? %>
+            <% @rentals.each do |rental| %>
+                <%= render 'shared/rental', rental:rental %>
+            <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>

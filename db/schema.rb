@@ -15,13 +15,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_18_151842) do
   enable_extension "plpgsql"
 
   create_table "rentals", force: :cascade do |t|
+    t.string "occupant"
     t.boolean "check_in"
     t.boolean "check_out"
     t.string "shift"
-    t.integer "number_of_days"
-    t.integer "number_of_hours"
+    t.string "expected_checkout"
     t.datetime "start_date"
-    t.datetime "end_date"
     t.bigint "room_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

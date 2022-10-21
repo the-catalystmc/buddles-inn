@@ -9,7 +9,7 @@
             <%= render 'shared/room', room:room %>
           <% end %>
       <% else %>
-        <% @rooms.each do |room| %>
+        <% @check.each do |room| %>
           <% if room.available == true %>
             <%= render 'shared/room', room:room %>
           <% end %>
