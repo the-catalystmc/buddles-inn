@@ -6,7 +6,14 @@ class RoomsController < ApplicationController
   end
 
 	def index
-		@rooms = Room.all
+		@rooms = Room.all.includes(:rentals)
+    @check = []
+    @rooms.each do |room|
+      if room.rentals.all? { |rental| rental.check_in == false }
+        @check.push(room)
+      end
+    end
+    @check
 	end
 
 	def show
@@ -67,6 +74,6 @@ class RoomsController < ApplicationController
   end
 
   def room_params
-    params.require(:room).permit(:number, :price, :available, :amenities, :image)
+    params.require(:room).permit(:number, :price_for_day, :price_for_partial, :available, :amenities, :image)
   end
 end

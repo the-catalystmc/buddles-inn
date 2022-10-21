@@ -10,7 +10,9 @@
         <a class="nav-link" href="#available">Rooms</a>
         <a class="nav-link" href="#">Contact Us</a>
         <% if user_signed_in? %>
-          <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-outline-secondary'  %>
+          <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-outline-secondary' %>
+          <%= link_to "Admin Panel", rentals_path, class: 'btn btn-outline-secondary' %>
+
         <% else %>
           <a href="<%= new_user_session_path %>" class="btn btn-outline-secondary">LOGIN</i></a>
         <% end %>

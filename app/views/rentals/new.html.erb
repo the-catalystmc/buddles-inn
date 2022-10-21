@@ -1,0 +1,31 @@
+<%= form_with model: @rental, url: rentals_path, method: :post do |f| %>
+    <div>
+    <%= f.text_field :occupant, placeholder: "Occupant Name", class: "form-control" %>
+  </div>
+
+   <div class='new-hidden'>
+    <%= f.select :check_in, [true, false], placeholder: "True", class: "form-control", style: 'display:none' %> 
+  </div>
+
+  <div class='new-hidden'>
+    <%= f.select :check_out, [false, true], placeholder: "False", class: "form-control", style: 'display:none' %>
+  </div>
+
+  <div>
+    <%= f.select :shift, [' ', 'Part-Time', 'Full-Time'], placeholder: "Time", class: "form-control" %>
+  </div>
+
+<%# Input an information icon/label with explanaion. %>
+    <div class=''>
+    <%= f.text_field :expected_checkout, value: @date, id: 'bar', class: "form-control" %>
+  </div>
+
+  <div>
+  <%# Tie each room number to ID %>
+    <%= f.text_field :room_id, placeholder: "Room Number", class: "form-control" %>
+  </div>
+  <div class="btn">
+    <%= f.submit "CHECK IN" %>
+  </div>     
+  <%= hidden_field_tag :room_id, @room %>
+<% end %>

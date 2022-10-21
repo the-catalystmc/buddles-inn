@@ -1,5 +1,6 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+@import 'flatpickr/dist/flatpickr.css';
 
 .home-banner {
     font-family: 'Tiro Devanagari Sanskrit', serif;
@@ -67,4 +68,8 @@ hr {
     p {
         margin: 0;
     }
+}
+
+.new-hidden {
+    display: none;
 }

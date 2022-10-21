@@ -10,13 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_11_034016) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_18_151842) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "rentals", force: :cascade do |t|
+    t.string "occupant"
+    t.boolean "check_in"
+    t.boolean "check_out"
+    t.string "shift"
+    t.string "expected_checkout"
+    t.datetime "start_date"
+    t.bigint "room_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_rentals_on_room_id"
+  end
+
   create_table "rooms", force: :cascade do |t|
     t.integer "number"
-    t.float "price"
+    t.float "price_for_day"
+    t.float "price_for_partial"
     t.boolean "available"
     t.string "amenities"
     t.string "image"
@@ -36,4 +50,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_11_034016) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "rentals", "rooms"
 end
