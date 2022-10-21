@@ -1,18 +1,24 @@
 <% if rental.check_in %>
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm border-primary">
-          <div class="card-header py-3 text-bg-primary border-primary">
+        <% if Time.now.after?(rental.expected_checkout) %>
+          <div class="card-header py-3 border-primary">
             <h4 class="my-0 fw-normal">ROOM #<%= rental.room_id %> </h4>
           </div>
+        <% else %>
+        <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">ROOM #<%= rental.room_id %> </h4>
+          </div>
+        <% end %>
           <div class="card-body">
             <h1 class="card-title pricing-card-title"> <%= rental.occupant %> </h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>Checked In At: <%= rental.created_at.strftime("%B-%d-%Y %I:%M%P") %> </li>
-                <li>Expected Checkout: <%= rental.expected_checkout %> </li>
-              <li>Phone and email support</li>
+              <li>Expected Checkout: <%= rental.expected_checkout %> </li>
+              <li></li>
               <li>Help center access</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">CHECKOUT</button>
+            <%= link_to "CHECKOUT", edit_rental_path(rental.id), class: "w-100 btn btn-lg btn-primary" %>
           </div>
         </div>
     </div>
@@ -27,12 +33,11 @@
             <ul class="list-unstyled mt-3 mb-4">
               <li>Checked In At: <%= rental.created_at.strftime("%B-%d-%Y %I:%M%P") %> </li>
               <li>Checked Out At: <%= rental.updated_at.strftime("%B-%d-%Y %I:%M%P") %> </li>
-              <li>Phone and email support</li>
-              <li>Help center access</li>
+              <li>Expected Checkout: <%= rental.expected_checkout %> </li>
               <li>OCCUPANT CHECKED OUT</li>
               <li>Please DELETE RECORD</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">DELETE</button>
+          <%= button_to "Delete", rental_path(rental.id), method: :delete, class: 'btn btn-outline-secondary' %>
           </div>
         </div>
     </div>
