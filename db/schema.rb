@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_18_151842) do
     t.boolean "check_in"
     t.boolean "check_out"
     t.string "shift"
-    t.string "expected_checkout"
+    t.datetime "expected_checkout"
     t.datetime "start_date"
     t.bigint "room_id", null: false
     t.datetime "created_at", null: false
