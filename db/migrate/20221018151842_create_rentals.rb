@@ -5,7 +5,7 @@ class CreateRentals < ActiveRecord::Migration[7.0]
       t.boolean :check_in
       t.boolean :check_out
       t.string :shift
-      t.string :expected_checkout
+      t.datetime :expected_checkout
       t.datetime :start_date
       t.references :room, null: false, foreign_key: true       
 

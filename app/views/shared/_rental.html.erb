@@ -14,7 +14,7 @@
             <h1 class="card-title pricing-card-title"> <%= rental.occupant %> </h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>Checked In At: <%= rental.created_at.strftime("%B-%d-%Y %I:%M%P") %> </li>
-              <li>Expected Checkout: <%= rental.expected_checkout %> </li>
+              <li>Expected Checkout: <%= rental.expected_checkout.strftime("%B-%d-%Y %I:%M%P") %> </li>
               <li></li>
               <li>Help center access</li>
             </ul>
@@ -33,7 +33,7 @@
             <ul class="list-unstyled mt-3 mb-4">
               <li>Checked In At: <%= rental.created_at.strftime("%B-%d-%Y %I:%M%P") %> </li>
               <li>Checked Out At: <%= rental.updated_at.strftime("%B-%d-%Y %I:%M%P") %> </li>
-              <li>Expected Checkout: <%= rental.expected_checkout %> </li>
+              <li>Expected Checkout: <%= rental.expected_checkout.strftime("%B-%d-%Y %I:%M%P") %> </li>
               <li>OCCUPANT CHECKED OUT</li>
               <li>Please DELETE RECORD</li>
             </ul>
