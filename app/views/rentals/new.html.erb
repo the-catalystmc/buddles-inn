@@ -1,5 +1,7 @@
+<div class="form">
 <%= form_with model: @rental, url: rentals_path, method: :post do |f| %>
-    <div>
+  <div>
+    <%= f.label :occupant, "Occupant Name" %>
     <%= f.text_field :occupant, placeholder: "Occupant Name", class: "form-control" %>
   </div>
 
@@ -12,17 +14,21 @@
   </div>
 
   <div>
+    <%= f.label :shift, "Length of Stay: " %>
     <%= f.select :shift, [' ', 'Part-Time', 'Full-Time'], placeholder: "Time", class: "form-control" %>
   </div>
 
   <div>
+    <%= f.label :expected_checkout, "Checkout Date/Time: " %>
     <%= f.datetime_select :expected_checkout, value: @date, id: 'bar', class: "form-control" %>
   </div>
   <div>
+    <%= f.label :room_id, "Room Number" %>
     <%= f.text_field :room_id, placeholder: "Room Number", class: "form-control" %>
   </div>
   <div class="btn">
-    <%= f.submit "CHECK IN" %>
+    <%= f.submit "CHECK IN", class: "btn btn-outline-primary" %>
   </div>     
   <%= hidden_field_tag :room_id, @room %>
 <% end %>
+</div>

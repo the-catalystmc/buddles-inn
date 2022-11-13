@@ -18,7 +18,11 @@
               <li></li>
               <li> <b> <%= rental.shift %> </b></li>
             </ul>
+            <% if Time.now.after?(rental.expected_checkout) %>
+            <%= link_to "CHECKOUT", edit_rental_path(rental.id), class: "w-100 btn btn-lg btn-primary bg-danger" %>
+            <% else %>
             <%= link_to "CHECKOUT", edit_rental_path(rental.id), class: "w-100 btn btn-lg btn-primary" %>
+            <% end %>
           </div>
         </div>
     </div>

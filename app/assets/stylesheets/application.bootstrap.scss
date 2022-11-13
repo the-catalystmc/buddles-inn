@@ -14,7 +14,16 @@
     overflow: hidden;
 }
 
+.home-title-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
 .home-title {
+    margin-bottom: 0;
+    padding-right: 10px;
     text-align: center;
 }
 
@@ -73,3 +82,66 @@ hr {
 .new-hidden {
     display: none;
 }
+
+.contact-us2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+      h2 {
+        padding: 20px 0 10px 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      .btn  {
+        text-align: center;
+      }
+  
+      .phone1 {
+        text-align: center;
+      }
+  
+      .phone2 {
+        text-align: center;
+      }
+  
+      .email1 {
+        text-align: center;
+      }
+  }
+
+.btn2 {
+    width: fit-content;
+}
+.btn0 {
+    margin-right: 10px;
+}
+
+.contact-us {
+    height: 80vh;
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+    background-color: gray;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    form {
+
+    div {
+        padding-bottom: 10px;
+    }
+    }
+  }

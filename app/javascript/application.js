@@ -4,18 +4,22 @@ import "./controllers"
 import flatpickr from "flatpickr";
 import * as bootstrap from "bootstrap";
 
-window.onload = function() {
-    //JavaScript goes here
-    const el = document.getElementById('bar');
-    flatpickr(el, {
-      enableTime:      true,
-      altInput:        true,
-      minDate:         "today",
-      altFormat:       "F j, Y at h:i K",
-      dateFormat:      "Y-m-d H:i",
-      defaultHour:     23,
-      defaultMinute:   59,
-      minuteIncrement: 1
+
+  function initMap() {
+    // The location of Uluru
+    const uluru = { lat: -25.344, lng: 131.031 };
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: uluru,
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
     });
   }
+  
+  window.initMap = initMap;
+
 
