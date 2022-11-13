@@ -7,9 +7,7 @@ class ApplicationController < ActionController::Base
           hour   = (params[(label.to_s + '(4)').to_sym] || 0).to_i
           minute = (params[(label.to_s + '(5)').to_sym] || 0).to_i
           second = (params[(label.to_s + '(6)').to_sym] || 0).to_i
-  
           return DateTime.civil_from_format(utc_or_local,year,month,mday,hour,minute,second)
-          
         rescue => e
           return nil
         end

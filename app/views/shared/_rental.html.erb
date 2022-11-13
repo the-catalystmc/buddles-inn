@@ -2,7 +2,7 @@
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm border-primary">
         <% if Time.now.after?(rental.expected_checkout) %>
-          <div class="card-header py-3 border-primary">
+          <div class="card-header py-3 border-primary text-white bg-danger">
             <h4 class="my-0 fw-normal">ROOM #<%= rental.room_id %> </h4>
           </div>
         <% else %>
@@ -16,7 +16,7 @@
               <li>Checked In At: <%= rental.created_at.strftime("%B-%d-%Y %I:%M%P") %> </li>
               <li>Expected Checkout: <%= rental.expected_checkout.strftime("%B-%d-%Y %I:%M%P") %> </li>
               <li></li>
-              <li>Help center access</li>
+              <li> <b> <%= rental.shift %> </b></li>
             </ul>
             <%= link_to "CHECKOUT", edit_rental_path(rental.id), class: "w-100 btn btn-lg btn-primary" %>
           </div>

@@ -15,13 +15,8 @@
     <%= f.select :shift, [' ', 'Part-Time', 'Full-Time'], placeholder: "Time", class: "form-control" %>
   </div>
 
-<%# <% f.label Input an information icon/label with explanaion. %> %>
-  <%# <div class=''> %>
-    <%# <%= f.text_field :expected_checkout, value: @date, id: 'bar', class: "form-control" %> %>
-  <%# </div> %>
   <div>
-  <%# <% Tie each room number to ID %> 
-    <%= f.datetime_select :expected_checkout, vale: @date, id: 'bar', class: "form-control" %>
+    <%= f.datetime_select :expected_checkout, value: @date, id: 'bar', class: "form-control" %>
   </div>
   <div>
     <%= f.text_field :room_id, placeholder: "Room Number", class: "form-control" %>
