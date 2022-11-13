@@ -1,7 +1,12 @@
 
   <div class="album py-5 bg-light" id='available'>
-    <h1 class="home-title">OUR RENTALS</h1>
-    <%= link_to "New Rental", new_rental_path, class: 'btn btn-outline-secondary' %>
+    <div class="home-title-holder">
+      <h1 class="home-title">OUR RENTALS </h1>
+      <div>
+      <%= link_to "Create Rental", new_rental_path, class: 'btn btn-outline-secondary' %>
+      </div>
+    </div>
+
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
