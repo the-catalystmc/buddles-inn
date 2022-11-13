@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/">Rooms</a>
-        <a class="nav-link" href="#">Contact Us</a>
+        <%= link_to "Contact Us", contact_path, class: "nav-link" %>
         <% if user_signed_in? %>
           <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-outline-secondary' %>
           <%= link_to "Admin Panel", rentals_path, class: 'btn btn-outline-secondary' %>
